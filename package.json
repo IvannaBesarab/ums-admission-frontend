@@ -2,7 +2,8 @@
   "name": "admissionsystem",
   "version": "0.0.0",
   "dependencies": {
-    "bower-installer": "^1.2.0"
+    "bower-installer": "^1.2.0",
+    "snyk": "^1.316.1"
   },
   "repository": {},
   "devDependencies": {
@@ -40,6 +41,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
-  }
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
